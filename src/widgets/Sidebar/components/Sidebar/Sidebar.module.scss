@@ -5,6 +5,8 @@
 
    position: relative;
    transition: width 0.4s;
+
+   box-shadow: var(--box-shadow);
 }
 
 .collapsed {
@@ -17,4 +19,8 @@
    display: flex;
    justify-content: center;
    width: 100%;
+}
+
+.lang {
+   margin-left: 20px;
 }
