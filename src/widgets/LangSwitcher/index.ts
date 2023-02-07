@@ -1,4 +1,4 @@
-import { LangSwitcher } from './components/LangSwitcher';
+import { LangSwitcher } from './components/LangSwitcher'
 
 export {
    LangSwitcher
