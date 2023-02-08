@@ -26,11 +26,11 @@ export const Button: FC<ButtonProps> = props => {
    } = props
 
    return (
-      <Button
+      <button
          {...otherProps}
          className={classNames(style.Button, {}, [className, style[theme]])}
       >
          {children}
-      </Button>
+      </button>
    )
 }
