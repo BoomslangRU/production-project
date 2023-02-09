@@ -59,6 +59,13 @@ module.exports = {
       'semi': [
          'error',
          'never'
+      ],
+      'max-len': [
+         'error',
+         {
+            'ignoreComments': true,
+            'code': 120
+         }
       ]
    }
 }

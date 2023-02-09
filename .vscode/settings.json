@@ -18,5 +18,8 @@
    "stylelint.validate": [
       "css",
       "scss"
-   ]
+   ],
+   "editor.tabSize": 2,
+   "editor.minimap.scale": 1,
+   "editor.minimap.size": "proportional"
 }
