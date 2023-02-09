@@ -7,8 +7,16 @@
    "cSpell.words": [
       "languagedetector",
       "linebreak",
+      "stylelint",
       "svgr",
       "Главная",
       "страница"
+   ],
+   "stylelint.enable": true,
+   "css.validate": true,
+   "scss.validate": true,
+   "stylelint.validate": [
+      "css",
+      "scss"
    ]
 }

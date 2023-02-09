@@ -7,7 +7,8 @@ module.exports = {
    'extends': [
       'eslint:recommended',
       'plugin:react/recommended',
-      'plugin:@typescript-eslint/recommended'
+      'plugin:@typescript-eslint/recommended',
+      'plugin:i18next/recommended'
    ],
    'overrides': [
    ],
@@ -18,7 +19,8 @@ module.exports = {
    },
    'plugins': [
       'react',
-      '@typescript-eslint'
+      '@typescript-eslint',
+      'i18next'
    ],
    'rules': {
       'react/jsx-indent': [
@@ -34,6 +36,12 @@ module.exports = {
          }
       ],
       'react/react-in-jsx-scope': 'off',
+      'i18next/no-literal-string': [
+         'error',
+         {
+            markupOnly: true
+         }
+      ],
       'indent': [
          'error',
          3
