@@ -10,6 +10,7 @@
       "stylelint",
       "svgr",
       "Главная",
+      "найдена",
       "страница"
    ],
    "stylelint.enable": true,
@@ -19,7 +20,8 @@
       "css",
       "scss"
    ],
-   "editor.tabSize": 2,
    "editor.minimap.scale": 1,
-   "editor.minimap.size": "proportional"
+   "editor.minimap.size": "proportional",
+   "editor.insertSpaces": false,
+   "editor.tabSize": 3
 }
