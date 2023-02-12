@@ -64,7 +64,7 @@ module.exports = {
          'error',
          {
             'ignoreComments': true,
-            'code': 120
+            'code': 100
          }
       ]
    }

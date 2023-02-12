@@ -27,6 +27,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       <div
          className={classNames(style.Sidebar, { [style.collapsed]: isCollapsed }, [className])}
       >
+         {/* eslint-disable-next-line i18next/no-literal-string */}
          <Button onClick={onToggle}>
             toggle
          </Button>
