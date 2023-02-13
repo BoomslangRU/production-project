@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
+
 module.exports = {
    'env': {
       'browser': true,
@@ -40,7 +41,10 @@ module.exports = {
       'i18next/no-literal-string': [
          'error',
          {
-            markupOnly: true
+            markupOnly: true,
+            ignoreAttribute: [
+               'data-testid'
+            ]
          }
       ],
       'indent': [
@@ -67,5 +71,19 @@ module.exports = {
             'code': 100
          }
       ]
-   }
+   },
+   'globals': {
+      __IS_DEV__: true
+   },
+   // eslint-disable-next-line no-dupe-keys
+   'overrides': [
+      {
+         'files': [
+            '**/src/**/*.test.{ts,tsx}'
+         ],
+         'rules': {
+            'i18next/no-literal-string': 'off'
+         }
+      }
+   ]
 }

@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, FC } from 'react'
+
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import style from './Button.module.scss'
@@ -24,6 +25,7 @@ export const Button: FC<ButtonProps> = props => {
       theme,
       ...otherProps
    } = props
+
 
    return (
       <button

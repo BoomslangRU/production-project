@@ -18,6 +18,7 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
    const [isCollapsed, setIsCollapsed] = useState(false)
 
+
    const onToggle = () => {
       setIsCollapsed(prev => !prev)
    }
@@ -25,13 +26,19 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
 
    return (
       <div
+         data-testid='sidebar'
          className={classNames(style.Sidebar, { [style.collapsed]: isCollapsed }, [className])}
       >
          {/* eslint-disable-next-line i18next/no-literal-string */}
-         <Button onClick={onToggle}>
+         <Button
+            data-testid='sidebar-toggle'
+            onClick={onToggle}
+         >
             toggle
          </Button>
-         <div className={style.switchers}>
+         <div
+            className={style.switchers}
+         >
             <ThemeSwitcher />
             <LangSwitcher className={style.lang} />
          </div>
