@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-
+/*global module */
 module.exports = {
    'env': {
       'browser': true,
@@ -10,7 +9,8 @@ module.exports = {
       'eslint:recommended',
       'plugin:react/recommended',
       'plugin:@typescript-eslint/recommended',
-      'plugin:i18next/recommended'
+      'plugin:i18next/recommended',
+      'plugin:storybook/recommended'
    ],
    'overrides': [
    ],
@@ -75,6 +75,7 @@ module.exports = {
    'globals': {
       __IS_DEV__: true
    },
+   'react/display-name': 'off',
    // eslint-disable-next-line no-dupe-keys
    'overrides': [
       {
@@ -85,5 +86,5 @@ module.exports = {
             'i18next/no-literal-string': 'off'
          }
       }
-   ]
+   ],
 }
