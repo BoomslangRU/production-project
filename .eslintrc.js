@@ -53,7 +53,7 @@ module.exports = {
       ],
       'react/jsx-props-no-spreading': 'warn',
       'linebreak-style': [
-         'warn',
+         0,
          'windows'
       ],
       'quotes': [
