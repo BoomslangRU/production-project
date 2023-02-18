@@ -75,6 +75,7 @@ module.exports = {
    'globals': {
       __IS_DEV__: true
    },
+   "linebreak-style": 0,
    // 'react/display-name': 'off',
    // eslint-disable-next-line no-dupe-keys
    'overrides': [
