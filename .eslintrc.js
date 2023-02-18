@@ -32,7 +32,7 @@ module.exports = {
       'react/jsx-filename-extension': [
          'error',
          {
-            extensions: [
+            'extensions': [
                '.js', '.jsx', 'tsx'
             ]
          }
@@ -41,8 +41,8 @@ module.exports = {
       'i18next/no-literal-string': [
          'error',
          {
-            markupOnly: true,
-            ignoreAttribute: [
+            'markupOnly': true,
+            'ignoreAttribute': [
                'data-testid'
             ]
          }
@@ -53,7 +53,7 @@ module.exports = {
       ],
       'react/jsx-props-no-spreading': 'warn',
       'linebreak-style': [
-         'error',
+         'warn',
          'windows'
       ],
       'quotes': [
@@ -70,13 +70,12 @@ module.exports = {
             'ignoreComments': true,
             'code': 100
          }
-      ]
+      ],
+      'react/display-name': 'off',
    },
    'globals': {
       __IS_DEV__: true
    },
-   "linebreak-style": 0,
-   // 'react/display-name': 'off',
    // eslint-disable-next-line no-dupe-keys
    'overrides': [
       {
