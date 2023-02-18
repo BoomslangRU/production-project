@@ -1,4 +1,5 @@
 import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button } from 'shared/ui/Button/Button'
@@ -17,7 +18,7 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
    const [isCollapsed, setIsCollapsed] = useState(false)
-
+   const { t } = useTranslation()
 
    const onToggle = () => {
       setIsCollapsed(prev => !prev)
@@ -34,7 +35,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             data-testid='sidebar-toggle'
             onClick={onToggle}
          >
-            toggle
+            {t('Переключить')}
          </Button>
          <div
             className={style.switchers}
