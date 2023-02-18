@@ -75,7 +75,7 @@ module.exports = {
    'globals': {
       __IS_DEV__: true
    },
-   'react/display-name': 'off',
+   // 'react/display-name': 'off',
    // eslint-disable-next-line no-dupe-keys
    'overrides': [
       {

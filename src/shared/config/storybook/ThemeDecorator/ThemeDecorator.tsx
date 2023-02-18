@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import type { Story } from '@storybook/react'
 import type { Theme } from 'app/providers/ThemeProvider'
 
