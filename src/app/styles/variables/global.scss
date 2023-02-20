@@ -15,4 +15,10 @@
    --sidebar-width: 300px;
    --sidebar-width-collapsed: 80px;
    --box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 20%);
+
+   // z-indexes
+   --modal-z-index: 10;
+
+   // colors
+   --overlay-color: rgba(0 0 0 / 56%);
 }

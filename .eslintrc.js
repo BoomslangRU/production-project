@@ -8,6 +8,7 @@ module.exports = {
    'extends': [
       'eslint:recommended',
       'plugin:react/recommended',
+      'plugin:react-hooks/recommended',
       'plugin:@typescript-eslint/recommended',
       'plugin:i18next/recommended',
       'plugin:storybook/recommended'
@@ -38,6 +39,8 @@ module.exports = {
          }
       ],
       'react/react-in-jsx-scope': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'i18next/no-literal-string': [
          'error',
          {
@@ -80,10 +83,11 @@ module.exports = {
    'overrides': [
       {
          'files': [
-            '**/src/**/*.test.{ts,tsx}'
+            '**/src/**/*.{test,stories}.{ts,tsx}'
          ],
          'rules': {
-            'i18next/no-literal-string': 'off'
+            'i18next/no-literal-string': 'off',
+            'max-len': 'off'
          }
       }
    ],
