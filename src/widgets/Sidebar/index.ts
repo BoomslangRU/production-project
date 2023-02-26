@@ -1,5 +1,1 @@
-import { Sidebar } from './components/Sidebar/Sidebar'
-
-export {
-   Sidebar
-}
+export { Sidebar } from './components/Sidebar/Sidebar'

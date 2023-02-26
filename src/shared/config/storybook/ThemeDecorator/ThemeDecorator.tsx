@@ -1,6 +1,6 @@
-/* eslint-disable react/display-name */
-import type { Story } from '@storybook/react'
 import { Theme, ThemeProvider } from 'app/providers/ThemeProvider'
+
+import type { Story } from '@storybook/react'
 
 
 

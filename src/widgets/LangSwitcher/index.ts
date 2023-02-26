@@ -1,5 +1,1 @@
-import { LangSwitcher } from './components/LangSwitcher'
-
-export {
-   LangSwitcher
-}
+export { LangSwitcher } from './components/LangSwitcher'

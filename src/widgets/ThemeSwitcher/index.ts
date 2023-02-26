@@ -1,5 +1,1 @@
-import { ThemeSwitcher } from './components/ThemeSwitcher'
-
-export {
-   ThemeSwitcher
-}
+export { ThemeSwitcher } from './components/ThemeSwitcher'
