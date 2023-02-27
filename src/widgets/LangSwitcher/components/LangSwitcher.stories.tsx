@@ -14,6 +14,7 @@ export default {
    }
 } as ComponentMeta<typeof LangSwitcher>
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof LangSwitcher> = args => <LangSwitcher {...args} />
 
 

@@ -14,6 +14,7 @@ export default {
    }
 } as ComponentMeta<typeof Loader>
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Loader> = args => <Loader {...args} />
 
 

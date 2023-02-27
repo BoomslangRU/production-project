@@ -55,6 +55,7 @@ export const Input = memo((props: InputProps) => {
 
    const onFocus = () => setIsFocused(true)
 
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
    const onSelect = (e: any) => {
       setCaretPosition(e?.target?.selectionStart || 0)
    }
@@ -79,6 +80,7 @@ export const Input = memo((props: InputProps) => {
                onBlur={onBlur}
                onFocus={onFocus}
                onSelect={onSelect}
+               // eslint-disable-next-line react/jsx-props-no-spreading
                {...otherProps}
             />
             {isFocused

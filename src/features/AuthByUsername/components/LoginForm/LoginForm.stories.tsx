@@ -15,6 +15,7 @@ export default {
    }
 } as ComponentMeta<typeof LoginForm>
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof LoginForm> = args => <LoginForm {...args} />
 
 

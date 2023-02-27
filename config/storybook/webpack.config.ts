@@ -3,17 +3,17 @@ import webpack, { DefinePlugin, RuleSetRule } from 'webpack'
 
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 
-import type { BuildPaths } from '../build/types/config'
+// import type { BuildPaths } from '../build/types/config'
 
 
 
 export default ({ config }: { config: webpack.Configuration }) => {
-   const paths: BuildPaths = {
-      build: '',
-      html: '',
-      entry: '',
-      src: path.resolve(__dirname, '..', '..', 'src')
-   }
+   // const paths: BuildPaths = {
+   //    build: '',
+   //    html: '',
+   //    entry: '',
+   //    src: path.resolve(__dirname, '..', '..', 'src')
+   // }
    config.resolve?.modules?.push(path.relative(__dirname, '../../src'), 'node_modules')
    config.resolve?.extensions?.push('.ts', 'tsx')
 
