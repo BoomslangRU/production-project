@@ -5,7 +5,9 @@
    ],
    "react-i18n.i18nPaths": "public\\locales,src\\shared\\config\\i18n",
    "cSpell.words": [
+      "firstname",
       "languagedetector",
+      "lastname",
       "linebreak",
       "stylelint",
       "svgr",

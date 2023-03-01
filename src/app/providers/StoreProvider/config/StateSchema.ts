@@ -6,9 +6,10 @@ import {
    CombinedState
 } from '@reduxjs/toolkit'
 
-import { CounterSchema } from 'entities/Counter'
-import { UserSchema } from 'entities/User'
-import { LoginSchema } from 'features/AuthByUsername'
+import type { CounterSchema } from 'entities/Counter'
+import type { UserSchema } from 'entities/User'
+import type { ProfileSchema } from 'entities/Profile/modal/types/profile'
+import type { LoginSchema } from 'features/AuthByUsername'
 
 
 
@@ -18,6 +19,7 @@ export interface StateSchema {
 
    // async reducers
    loginForm?: LoginSchema
+   profile?: ProfileSchema
 }
 
 

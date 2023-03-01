@@ -3,6 +3,7 @@ import { StateSchema } from 'app/providers/StoreProvider'
 
 
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type ActionCreatorType<Return, Arg, _>
    = (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectValue: string }>
 

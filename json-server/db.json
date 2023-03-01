@@ -41,6 +41,12 @@
       }
    ],
    "profile": {
-      "name": "typicode"
+      "firstname": "Alexander",
+      "lastname": "Boomslang",
+      "age": 41,
+      "currency": "RUB",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU4XDzFJRV1_jAcQ1ao4XtBCkCgna1HReryiYWHPXnVNxwAkqFfVl52z6v9QgSpu367cA&usqp=CAU"
    }
 }

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import styles from './Text.module.scss'
@@ -17,7 +18,7 @@ interface TextProps {
 
 
 
-export const Text = (props: TextProps) => {
+export const Text = memo((props: TextProps) => {
    const {
       className,
       title,
@@ -39,4 +40,4 @@ export const Text = (props: TextProps) => {
          }
       </div>
    )
-}
+})
