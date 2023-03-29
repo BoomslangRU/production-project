@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, memo } from 'react'
 
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, Mods } from '../../lib/classNames/classNames'
 
 import styles from './Button.module.scss'
 
@@ -35,7 +35,7 @@ export const Button = memo((props: ButtonProps) => {
    const {
       className,
       children,
-      theme,
+      theme = ThemeButton.CLEAR,
       square,
       disabled,
       size = SizeButton.M,
@@ -46,9 +46,13 @@ export const Button = memo((props: ButtonProps) => {
    const additional = [
       className,
       styles[theme],
-      styles[square],
       styles[size]
    ]
+
+   const mods: Mods = {
+      [styles.disabled]: disabled,
+      [styles.square]: square
+   }
 
 
 
@@ -56,7 +60,7 @@ export const Button = memo((props: ButtonProps) => {
       <button
          // eslint-disable-next-line react/jsx-props-no-spreading
          {...otherProps}
-         className={classNames(styles.Button, { [styles.disabled]: disabled }, additional)}
+         className={classNames(styles.Button, mods, additional)}
          disabled={disabled}
       >
          {children}

@@ -4,6 +4,7 @@
       "src/shared/config/i18n"
    ],
    "react-i18n.i18nPaths": "public\\locales,src\\shared\\config\\i18n",
+   "react-ally.keystyle": "nested",
    "cSpell.words": [
       "firstname",
       "languagedetector",
@@ -28,5 +29,10 @@
    "editor.minimap.size": "proportional",
    "editor.insertSpaces": true,
    "editor.tabSize": 3,
-   "editor.cursorStyle": "block"
+   "editor.cursorStyle": "block",
+   "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+   },
+   "editor.formatOnSave": true
 }

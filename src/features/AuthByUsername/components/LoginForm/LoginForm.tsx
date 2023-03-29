@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
@@ -18,6 +18,9 @@ import {
    ReducersList
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 
+import textImage from 'shared/assets/images/bugs_bunny2.png'
+import passwordImage from 'shared/assets/images/bugs_bunny1.png'
+
 import styles from './LoginForm.module.scss'
 
 
@@ -27,7 +30,6 @@ export interface LoginFormProps {
    className?: string
    onSuccess: () => void
 }
-
 const initialReducers: ReducersList = {
    loginForm: loginReducer
 }
@@ -37,10 +39,28 @@ const initialReducers: ReducersList = {
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
    const { t } = useTranslation()
    const dispatch = useAppDispatch()
+   const [isPassword, setIsPassword] = useState(false)
+
    const username = useSelector(getLoginUsername)
    const password = useSelector(getLoginPassword)
    const isLoading = useSelector(getLoginIsLoading)
    const error = useSelector(getLoginError)
+
+   const onKeyDown = useCallback(e => {
+      if (e.target?.id === 'password') {
+         setIsPassword(true)
+      } else {
+         setIsPassword(false)
+      }
+   }, [])
+
+   useEffect(() => {
+      window.addEventListener('keydown', onKeyDown)
+
+      return () => {
+         window.removeEventListener('keydown', onKeyDown)
+      }
+   }, [onKeyDown])
 
 
    const onChangeUsername = useCallback((value: string) => {
@@ -67,6 +87,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
          <div
             className={classNames(styles.LoginModal, {}, [className])}
          >
+
+            <div className={styles.images}>
+               {isPassword
+                  ? <img className={styles.image} src={passwordImage} alt='passwordImage' />
+                  : <img className={styles.image} src={textImage} alt='textImage' />
+               }
+            </div>
+
             <Text title={t('Форма авторизации')} />
             {error
                ? <Text
@@ -86,6 +114,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
             />
             <Input
                className={styles.input}
+               id='password'
                type='text'
                placeholder={t('Введите пароль')}
                value={password}

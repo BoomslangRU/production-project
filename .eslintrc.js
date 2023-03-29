@@ -77,7 +77,8 @@ module.exports = {
       'react/display-name': 'off',
    },
    'globals': {
-      __IS_DEV__: true
+      __IS_DEV__: true,
+      __API__: true
    },
    // eslint-disable-next-line no-dupe-keys
    'overrides': [

@@ -12,3 +12,27 @@
    margin-top: 15px;
    margin-left: auto;
 }
+
+.images {
+   display: flex;
+   justify-content: center;
+   max-width: 100%;
+}
+
+.image {
+   width: 180px;
+   height: 180px;
+   animation: popup 1.6s forwards ease-in-out;
+}
+
+@keyframes popup {
+   0% {
+      opacity: 0;
+      transform: translateX(30%);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}

@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, Mods } from '../../lib/classNames/classNames'
 import { Portal } from '../Portal/Portal'
 import { useTheme } from 'app/providers/ThemeProvider'
 
@@ -69,7 +69,7 @@ export const Modal = (props: ModalProps) => {
       }
    }, [isOpen, onKeyDown])
 
-   const mods: Record<string, boolean> = {
+   const mods: Mods = {
       [styles.opened]: isOpen,
       [styles.isClosing]: isClosing
    }

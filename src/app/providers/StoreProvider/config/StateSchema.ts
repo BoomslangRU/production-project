@@ -1,15 +1,15 @@
 import {
-   EnhancedStore,
-   ReducersMapObject,
-   AnyAction,
-   Reducer,
-   CombinedState
+   AnyAction, EnhancedStore, Reducer, ReducersMapObject
 } from '@reduxjs/toolkit'
+import { CombinedState, Dispatch } from 'redux'
+import { API } from 'shared/api/api'
 
+import type { NavigateOptions, To } from 'react-router-dom'
 import type { CounterSchema } from 'entities/Counter'
-import type { UserSchema } from 'entities/User'
 import type { ProfileSchema } from 'entities/Profile/modal/types/profile'
+import type { UserSchema } from 'entities/User'
 import type { LoginSchema } from 'features/AuthByUsername'
+
 
 
 
@@ -35,4 +35,16 @@ export interface ReducerManager {
 
 export interface ReduxStoreManager extends EnhancedStore<StateSchema> {
    reducerManager: ReducerManager
+}
+
+
+export interface ThunkExtraArg {
+   api: typeof API
+   navigate?: (to: To, options?: NavigateOptions) => void
+}
+
+export interface ThunkConfig<T> {
+   rejectValue: T
+   extra: ThunkExtraArg
+   dispatch: any
 }
