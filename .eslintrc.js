@@ -13,6 +13,11 @@ module.exports = {
       'plugin:i18next/recommended',
       'plugin:storybook/recommended'
    ],
+   'settings': {
+      'react': {
+         'version': 'detect'
+      }
+   },
    'overrides': [
    ],
    'parser': '@typescript-eslint/parser',
